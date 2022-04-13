@@ -1,2 +1,2 @@
 # Connect-4-Game
-A Connect 4 game made with Python.
+The code for a game of Connect 4 made with Python.
