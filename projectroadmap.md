@@ -3,7 +3,8 @@ Project Road Map
 - [x] Install Pygame
 - [x] Install Numby
 - [x] Run code from the codebase 
-- [ ] Create larger board 
-- [ ] Update color options
-- [ ] Change size of board
-- [ ] Create better winner display
+- [x] Create larger board 
+- [x] Update color options
+- [x] Change size of board
+- [x] Create better winner display
+- [x] Changed board background to match KSU RGB color from offical syle guide 
