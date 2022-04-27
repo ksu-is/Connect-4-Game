@@ -15,6 +15,21 @@ def create_board():
 	board = np.zeros((ROW_COUNT,COLUMN_COUNT))
 	return board
 
+def animate_move(board, row, col, piece):
+ xposition = int(col*SQUARESIZE + SQUARESIZE/2)
+ yposition = int(SQUARESIZE/2)
+ COLOR = BLUE
+ if piece == 2:
+  COLOR = RED
+ yspeed = 1
+ while yposition < (height-row*SQUARESIZE-SQUARESIZE/2):
+  yspeed += .10
+  yposition += yspeed
+  pygame.draw.rect(screen, BLACK, (0,0, width, SQUARESIZE))
+  draw_board(board)
+  pygame.draw.circle(screen, COLOR, (xposition, int(yposition)), RADIUS)
+  pygame.display.update()
+
 def drop_piece(board, row, col, piece):
 	board[row][col] = piece
 
@@ -116,6 +131,7 @@ while not game_over:
 
 				if is_valid_location(board, col):
 					row = get_next_open_row(board, col)
+					animate_move(board, row, col, 1)
 					drop_piece(board, row, col, 1)
 
 					if winning_move(board, 1):
@@ -131,6 +147,7 @@ while not game_over:
 
 				if is_valid_location(board, col):
 					row = get_next_open_row(board, col)
+					animate_move(board, row, col, 2)
 					drop_piece(board, row, col, 2)
 
 					if winning_move(board, 2):
@@ -145,4 +162,7 @@ while not game_over:
 			turn = turn % 2
 
 			if game_over:
-				pygame.time.wait(7000)
+				pygame.time.wait(10000)
+				
+
+		
