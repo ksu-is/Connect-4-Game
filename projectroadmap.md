@@ -8,3 +8,6 @@ Project Road Map
 - [x] Change size of board
 - [x] Create better winner display
 - [x] Changed board background to match KSU RGB color from offical syle guide 
+- [x] Changed the timer at the end of the game
+- [x] Added animations to the pieces as they drop into position
+- [x] Creted a PPT slide that introduces my project
